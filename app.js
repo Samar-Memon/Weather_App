@@ -70,3 +70,10 @@ async function getWeather() {
   }
 
 }
+
+window.addEventListener('keypress', (e) => {
+	if(e.key == 'Enter'){
+		getWeather()
+	}
+	document.querySelector('input').focus()
+})
