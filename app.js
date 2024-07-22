@@ -33,11 +33,11 @@ async function getWeather() {
         displatFunc4Get()
 
         document.querySelector('.city').textContent = data.name
-        document.querySelector('.temp').textContent = `${Math.round(data.main.temp - 273.15)}°C`
-        document.querySelector('.feelLike').textContent = `Feel Like ${Math.round(data.main.feels_like - 273.15)}°C`
+        document.querySelector('.temp').textContent = `${Math.floor(data.main.temp - 273.15)}°C`
+        document.querySelector('.feelLike').textContent = `Feel Like ${Math.floor(data.main.feels_like - 273.15)}°C`
         document.getElementById('humidity').textContent = `${data.main.humidity}%`
         document.querySelector('.description').textContent = `${data.weather[0].description}`
-        document.getElementById('wind').textContent = `${data.wind.speed}Km/H`
+        document.getElementById('wind').textContent = `${Math.floor(data.wind.speed)} Km/H`
 
         switch(data.weather[0].main){
             case 'Clear':
