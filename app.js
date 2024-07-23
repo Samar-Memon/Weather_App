@@ -60,7 +60,7 @@ async function getWeather() {
 
     }else {
         document.querySelector('.city').textContent = `"${city}" not found`
-        img.src = './img/404.png'
+      Swal.fire("City Not Found!"); 
         displatFunc4NoGet()
         document.querySelector('.load').style.display = 'none'
    }
