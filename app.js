@@ -32,7 +32,7 @@ async function getWeather() {
     document.querySelector('.load').style.display = 'none'
         displatFunc4Get()
 
-        document.querySelector('.city').textContent = data.name
+        document.querySelector('.city').textContent = `${data.name},${data.sys.country}`
         document.querySelector('.temp').textContent = `${Math.floor(data.main.temp - 273.15)}°C`
         document.querySelector('.feelLike').textContent = `Feel Like ${Math.floor(data.main.feels_like - 273.15)}°C`
         document.getElementById('humidity').textContent = `${data.main.humidity}%`
@@ -71,7 +71,7 @@ async function getWeather() {
 
 }
 
-window.addEventListener('keypress', (e) => {
+document.addEventListener('keydown', (e) => {
 	if(e.key == 'Enter'){
 		getWeather()
 	}
