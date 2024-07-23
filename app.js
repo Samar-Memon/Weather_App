@@ -7,7 +7,7 @@ const displatFunc4Get = () => {
     document.querySelector('.bottom').style.display = 'flex'
 }
 const displatFunc4NoGet = () => {
-    return document.querySelector('.icon').style.display = 'block',
+    return document.querySelector('.icon').style.display = 'none',
     document.querySelector('.city').style.display = 'block',
     document.querySelector('.bottom').style.display = 'none',
     document.querySelector('.temp').style.display = 'none',
